@@ -28,6 +28,6 @@
 	spl_autoload_register(function($class){
 		require_once('classes/'.$class.'.php');
 	});
-	// ONLY TEST
+
 	require_once('usefulFunctions.php');
 ?>
