@@ -25,11 +25,16 @@
 
 
 	// Includes: ==============================================
+	
+	// Commonly used functions:
+	require_once('usefulFunctions.php');
+
+
+	// Auto class includes:
 	spl_autoload_register(function($class){
 		require_once('classes/'.$class.'.php');
 	});
 
-	require_once('usefulFunctions.php');
 
 
 
