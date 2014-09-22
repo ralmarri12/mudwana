@@ -7,6 +7,7 @@
 <?php foreach($articles as $article): ?>
 <h1><a href="article.php?id=<?=$article->get_id()?>"><?=$article->get_title()?></a></h1>
 <small>Written by: <?=$article->get_author_name()?></small>
+<h1><?=$article->get_id()?></h1>
 <p><?=substr($article->get_content(), 0, 100)?>...<a href="article.php?id=<?=$article->get_id()?>">[Read more]</a></p>
 <hr>
 <?php endforeach;?>

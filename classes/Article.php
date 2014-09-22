@@ -1,20 +1,19 @@
 <?php
 
-class Article{
+class Article extends Comment{
 	
 	// Data members: ================================s
-	private $_id 			= 0;
 	private $_title 		= 'empty';
-	private $_author_name 	= 'unknown';
-	private $_content 		= 'empty';
 	private $_comments 		= array();
 
 	// Methods: =====================================
 	public function __construct($article_id = null){
 
 		if($article_id != null){
-			$this->_id = $article_id;
 
+			$this->_id = $article_id;
+			parent::set_id($article_id);
+			
 			try{
 				$this->retrieve_from_db();
 			}catch(Exception $e){
@@ -24,10 +23,6 @@ class Article{
 
 	}
 
-	public function get_id(){
-		return $this->_id;
-	}
-
 
 	public function get_title(){
 		return $this->_title;
@@ -35,22 +30,6 @@ class Article{
 
 	public function set_title($title){
 		$this->_title = $title;
-	}
-
-	public function get_author_name(){
-		return $this->_author_name;
-	}
-
-	public function set_author_name($author_name){
-		$this->_author_name = $author_name;
-	}
-
-	public function get_content(){
-		return $this->_content;
-	}
-
-	public function set_content($content){
-		$this->_content = $content;
 	}
 
 
@@ -79,6 +58,7 @@ class Article{
 			throw new Exception("Article: SQL Syntax error.");	
 		}
 
+
 		if($statement->rowCount() == 0){
 			throw new Exception('Article: Wrong article id.');
 		}
@@ -88,8 +68,8 @@ class Article{
 
 		// Re-store the	results:
 		$this->_title 		= $results->article_title;
-		$this->_author_name = $results->author_name;
-		$this->_content 	= $results->article_content;
+		parent::set_author_name($results->author_name);
+		parent::set_content($results->article_content);
 		
 
 		// Getting all comments:

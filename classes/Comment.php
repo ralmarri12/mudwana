@@ -3,7 +3,7 @@
 class Comment{
 	
 	// Data members: ================================
-	private $_id 		     = 0;
+	protected $_id 		     = 0;
 	private $_author_name	 = 'unknown';
 	private $_content		 = 'empty';
 
@@ -27,6 +27,9 @@ class Comment{
 		return $this->_id;
 	}
 
+	public function set_id($id){
+		$this->_id = $id;
+	}
 
 	public function get_author_name(){
 		return $this->_author_name;
@@ -46,7 +49,7 @@ class Comment{
 	}
 
 
-	public function retrieve_from_db(){
+	private function retrieve_from_db(){
 		global $connection;
 
 		// Preparing the SQL statment:
