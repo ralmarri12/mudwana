@@ -13,6 +13,13 @@ Only one actor (visitor)
 2. View articles.
 3. Comment on an article.
 
+
+<img src="http://i.imgur.com/6ZmOjII.png" alt="use-casses">
+==============
+<strong>ER-Diagram (Database)</strong>
+<img src="http://i.imgur.com/6yX3uXK.png" alt="ER-Diagram">
+
 ==============
 <strong>New class diagram</strong>
 <img src="http://i.imgur.com/F7BYbY5.png" alt="class-diagram">
+
