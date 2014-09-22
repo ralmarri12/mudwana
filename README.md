@@ -12,3 +12,7 @@ Only one actor (visitor)
 1. Add an article.
 2. View articles.
 3. Comment on an article.
+
+==============
+<strong>New class diagram</strong>
+<img src="http://i.imgur.com/F7BYbY5.png" alt="class-diagram">
