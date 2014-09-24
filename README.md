@@ -21,5 +21,5 @@ Only one actor (visitor)
 
 ==============
 <strong>New class diagram</strong>
-<img src="http://i.imgur.com/F7BYbY5.png" alt="class-diagram">
+<img src="http://i.imgur.com/1O3Bqgi.png" alt="class-diagram">
 
