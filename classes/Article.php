@@ -137,6 +137,3 @@ class Article extends Comment{
 
 	
 }
-
-
-?>
